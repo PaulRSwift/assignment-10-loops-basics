@@ -23,7 +23,7 @@ var simpOrSamp = function (arrOfStr) {
         var firstName = arrOfStr[i];
       //   log(firstName.length);
     	var fullName;
-        if (firstName.length > 6) {
+        if (firstName.length >= 6) {
             fullName = firstName + " Simpson";
         } else {
             fullName = firstName + " Sampson";
@@ -65,7 +65,7 @@ var allNames = [
 ]
 
 var shortiesOnly = function (arrOfStr) {
-    var arrayLength = arrOfStr.length;
+   var arrayLength = arrOfStr.length;
 	var resultsArray = [];
 
 
@@ -74,7 +74,7 @@ var shortiesOnly = function (arrOfStr) {
         var firstName = arrOfStr[i];
         //log(firstName.length);
         if (firstName.length <= 4) {
-        	resultsArray.push(firstName);
+        resultsArray.push(firstName);
         }
    }
 
@@ -83,6 +83,7 @@ var shortiesOnly = function (arrOfStr) {
 
 
 var shortList = shortiesOnly(allNames)
+
 console.assert( shortList.length === 4 )
 // checks to see that FRED is INCUDED in the array.
 console.assert( shortList.indexOf('Fred') != -1 )
